@@ -3,74 +3,67 @@
   <source media="(prefers-color-scheme: light)" srcset="https://user-images.githubusercontent.com/9113740/201498152-b171abb8-9225-487a-821c-6ff49ee48579.png">
 </picture>
 
-<div align="center"><strong>Next.js Admin Dashboard Starter Template With Shadcn-ui</strong></div>
-<div align="center">Built with the Next.js App Router</div>
+<div align="center"><strong>홀덤펍 통합 관리자 대시보드</strong></div>
+<div align="center">Next.js 기반의 홀덤펍 관리자 시스템</div>
 <br />
-<div align="center">
-<a href="https://next-shadcn-dashboard-starter.vercel.app">View Demo</a>
-<span>
-</div>
 
-## Overview
+## 개요
 
-This is a starter template using the following stack:
+이 프로젝트는 홀덤펍 운영을 위한 관리자 대시보드입니다. 다음과 같은 기술 스택을 사용합니다:
 
-- Framework - [Next.js (14 | 15) ](https://nextjs.org/13)
+- Framework - [Next.js (14)](https://nextjs.org/13)
 - Language - [TypeScript](https://www.typescriptlang.org)
 - Styling - [Tailwind CSS](https://tailwindcss.com)
 - Components - [Shadcn-ui](https://ui.shadcn.com)
 - Schema Validations - [Zod](https://zod.dev)
 - State Management - [Zustand](https://zustand-demo.pmnd.rs)
-- Search params state manager - [Nuqs](https://nuqs.47ng.com/)
 - Auth - [Auth.js](https://authjs.dev/)
 - Tables - [Tanstack Tables](https://ui.shadcn.com/docs/components/data-table)
 - Forms - [React Hook Form](https://ui.shadcn.com/docs/components/form)
-- Command+k interface - [kbar](https://kbar.vercel.app/)
-- Linting - [ESLint](https://eslint.org)
-- Pre-commit Hooks - [Husky](https://typicode.github.io/husky/)
-- Formatting - [Prettier](https://prettier.io)
 
-_If you are looking for a React admin dashboard starter, here is the [repo](https://github.com/Kiranism/react-shadcn-dashboard-starter)._
+## 주요 기능
 
-## Pages
+| 페이지    | 기능 설명                                                                                  |
+| :-------- | :----------------------------------------------------------------------------------------- |
+| 로그인    | - 관리자 인증<br>- 권한별 접근 제어 (시스템 관리자/매장 관리자)                            |
+| 대시보드  | - 일일 매출 통계<br>- 진행중인 게임 현황<br>- 예약 현황<br>- 주요 지표 그래프              |
+| 매장 관리 | - 매장 기본 정보 관리 <br>- 편의시설 정보 관리<br>- 매장별 정책 설정                       |
+| 게임 관리 | - 게임 생성/수정/삭제<br>- 블라인드 구조 설정<br>- 참가자 관리<br>- 게임 진행 현황         |
+| 회원 관리 | - 회원 목록 조회/검색<br>- 임시 회원 생성<br>- 회원 상세 정보 관리<br>- 포인트/이용권 관리 |
+| 결제/정산 | - 결제 내역 관리<br>- 포인트 적립/사용 내역<br>- 매출 통계 및 리포트                       |
+| 설정      | - 관리자 계정 설정(시스템 관리자에게만)<br>                                                |
 
-| Pages                                                                                   | Specifications                                                                                                                      |
-| :-------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------- |
-| [Signup](https://next-shadcn-dashboard-starter.vercel.app/)                             | Authentication with **NextAuth** supports Social logins and email logins (Enter dummy email for demo).                              |
-| [Dashboard](https://next-shadcn-dashboard-starter.vercel.app/dashboard)                 | Cards with recharts graphs for analytics.                                                                                           |
-| [Employee](https://next-shadcn-dashboard-starter.vercel.app/dashboard/employee)         | Tanstack tables with server side searching, filter, pagination by Nuqs which is a Type-safe search params state manager in nextjs). |
-| [Employee/new](https://next-shadcn-dashboard-starter.vercel.app/dashboard/employee/new) | A Employee Form with shadcn form (react-hook-form + zod).                                                                           |
-| [Product](https://next-shadcn-dashboard-starter.vercel.app/dashboard/product)           | Tanstack tables with server side searching, filter, pagination by Nuqs which is a Type-safe search params state manager in nextjs   |
-| [Product/new](https://next-shadcn-dashboard-starter.vercel.app/dashboard/product/new)   | A Product Form with shadcn form (react-hook-form + zod).                                                                            |
-| [Profile](https://next-shadcn-dashboard-starter.vercel.app/dashboard/profile)           | Mutistep dynamic forms using react-hook-form and zod for form validation.                                                           |
-| [Kanban Board](https://next-shadcn-dashboard-starter.vercel.app/dashboard/kanban)       | A Drag n Drop task management board with dnd-kit and zustand to persist state locally.                                              |
-| [Not Found](https://next-shadcn-dashboard-starter.vercel.app/dashboard/notfound)        | Not Found Page Added in the root level                                                                                              |
-| -                                                                                       | -                                                                                                                                   |
+## 시작하기
 
-## Getting Started
+1. 저장소 복제:
 
-Follow these steps to clone the repository and start the development server:
+```bash
 
-> [!NOTE]  
-> If you want to use the starter with  **Next 15** with **React 19**, follow these steps:
-> - Clone only the `next-15` branch:
->   ```bash
->   git clone --branch next-15 --single-branch https://github.com/Kiranism/next-shadcn-dashboard-starter.git
-
-- Clone the repo:
-```bash 
-git clone https://github.com/Kiranism/next-shadcn-dashboard-starter.git 
 ```
 
-- `npm install`
-- Create a `.env.local` file by copying the example environment file:
-  `cp env.example.txt .env.local`
-- Add the required environment variables to the `.env.local` file.
-- `npm run dev`
+2. 의존성 설치:
 
-You should now be able to access the application at http://localhost:3000.
+```bash
+npm install
+```
 
-> [!WARNING]  
-> After cloning or forking the repository, be cautious when pulling or syncing with the latest changes, as this may result in breaking conflicts.
+3. 환경 변수 설정:
 
-Cheers! 🥂
+```bash
+cp env.example.txt .env.local
+```
+
+필요한 환경 변수:
+
+- DATABASE_URL: 데이터베이스 연결 정보
+- NEXTAUTH_SECRET: 인증 시크릿 키
+- KAKAO_CLIENT_ID: 카카오 로그인 연동 정보
+- KAKAO_CLIENT_SECRET: 카카오 로그인 시크릿
+
+4. 개발 서버 실행:
+
+```bash
+npm run dev
+```
+
+http://localhost:3000 에서 확인할 수 있습니다.
