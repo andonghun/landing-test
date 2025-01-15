@@ -1,24 +1,21 @@
-import Link from 'next/link';
+import { NavbarTwoColumns } from '@/navigation/NavbarTwoColumns';
 
 import { Background } from '../background/Background';
-import { Button } from '../button/Button';
 import { HeroOneButton } from '../hero/HeroOneButton';
 import { Section } from '../layout/Section';
-import { NavbarTwoColumns } from '../navigation/NavbarTwoColumns';
 import { Logo } from './Logo';
 
 const Hero = () => (
   <Background color="bg-gray-100">
     <Section yPadding="py-6">
       <NavbarTwoColumns logo={<Logo xl />}>
-        <li>
-          <Link href="https://github.com/ixartz/Next-JS-Landing-Page-Starter-Template">
-            GitHub
-          </Link>
+        {/* <li>
+          <a href="#features">기능 소개</a>
         </li>
         <li>
-          <Link href="/">Sign in</Link>
-        </li>
+          <a href="#pricing">요금제</a>
+        </li> */}
+        <li>{/* <Button xl>무료로 시작하기</Button> */}</li>
       </NavbarTwoColumns>
     </Section>
 
@@ -26,16 +23,12 @@ const Hero = () => (
       <HeroOneButton
         title={
           <>
-            {'The modern landing page for\n'}
-            <span className="text-primary-500">React developers</span>
+            {'홀덤펍 관리를 더 쉽고 스마트하게,\n'}
+            <span className="text-primary-500">야자수</span>
           </>
         }
-        description="The easiest way to build a React landing page in seconds."
-        button={
-          <Link href="https://creativedesignsguru.com/category/nextjs/">
-            <Button xl>Download Your Free Theme</Button>
-          </Link>
-        }
+        description="홀덤펍을 운영하고 관리하는 최적의 솔루션"
+        button={<></>}
       />
     </Section>
   </Background>
